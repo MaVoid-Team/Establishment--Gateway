@@ -1,0 +1,9 @@
+{
+    "development": {
+      "username": "postgres",
+      "password": "Ismk7@wscxSpjdbI",
+      "database": "liwandb",
+      "host": "46.202.130.203",
+      "dialect": "postgres"  
+    }
+  }

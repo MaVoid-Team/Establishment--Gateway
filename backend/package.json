@@ -1,0 +1,37 @@
+{
+  "dependencies": {
+    "@sendgrid/mail": "^8.1.4",
+    "bcrypt": "^5.1.1",
+    "connect-session-sequelize": "^7.1.7",
+    "cors": "^2.8.5",
+    "date-fns": "^4.1.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "express-formidable": "^1.2.0",
+    "express-session": "^1.18.1",
+    "file-type": "^16.5.4",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^6.9.16",
+    "nodemailer-sendgrid-transport": "^0.2.0",
+    "nodemon": "^3.1.7",
+    "pg": "^8.13.1",
+    "sanitize-filename": "^1.6.3",
+    "sequelize": "^6.37.5",
+    "serve-index": "^1.9.1",
+    "socket.io": "^4.8.1",
+    "validator": "^13.12.0",
+    "winston": "^3.17.0",
+    "winston-daily-rotate-file": "^5.0.0"
+  },
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

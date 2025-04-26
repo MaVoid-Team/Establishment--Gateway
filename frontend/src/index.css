@@ -1,0 +1,342 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  :root {
+    --background-light: url('assets/photo19.jpg');
+    --background-dark: url('assets/photo24.jpg');
+    --main-page-bg: var(--background-light);
+    --foreground: 240 10% 3.9%;
+    --card: ; 
+    --card-foreground: 0, 0% 0%;
+    --popover: 39 20% 63%; 
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 89%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 10% 3.9%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* --gradientBG: linear-gradient(288deg, rgba(88,81,70,1) 0%, rgba(184,173,144,1) 26%, rgba(184,173,144,1) 46%, rgba(135,126,103,1) 61%, rgba(88,81,70,1) 100%); */
+    --imageUrlBG: url('assets/Group 30.png');
+    --newLoginBg: url('assets/Group 30.png'); 
+    --gradientText: url(linear-gradient(164deg, rgba(187,174,149,1) 0%, rgba(90,76,67,1) 100%));
+    --pie-chart-1: #0073e6; 
+    --pie-chart-2: #34A5FA; 
+    --pie-chart-3: #ff6361; 
+    --pie-chart-4: #ffa600; 
+    --pie-chart-5: #F87171; 
+    --pie-chart-6: #A78BFA; 
+    --pie-chart-7: #2DD4BF; 
+    --pie-chart-8: #2563EB; 
+    --landing-page-Bg: url('assets/portfoliobgdark.jpg');
+    --gradient-stop1: #BBAE95; 
+    --gradient-stop2: #5A4C43;
+    --bg-gifar: url('assets/gifar.gif');
+    --bg-gifen: url('assets/gifen.gif');
+    --print-bg: url('assets/LiwanCoverLight.png');
+  }
+
+  
+  .dark {
+    --main-page-bg: var(--background-dark);
+    --foreground: 0 0% 100%;
+    --card: 0 0% 63%.8%;
+    --card-foreground: 0 0% 100%;
+    --popover: 204 14.3% 6.9%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 360 0% 58%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+    --sidebar-background: 210 26.1% 6%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* --gradientBG: linear-gradient(288deg, rgba(88,81,70,1) 0%, rgba(184,173,144,1) 26%, rgba(184,173,144,1) 46%, rgba(135,126,103,1) 61%, rgba(88,81,70,1) 100%); */
+    /* --imageUrlBG: url('assets/portfoliobgdark.jpg');
+    --newLoginBg: url('assets/portfoliobgdark.jpg'); */
+    --gradientText: url(linear-gradient(164deg, rgba(187,174,149,1) 0%, rgba(90,76,67,1) 100%));
+    --pie-chart-1: #0073e6; 
+    --pie-chart-2: #ff63EB; 
+    --pie-chart-3: #10B981; 
+    --pie-chart-4: #F59E0B; 
+    --pie-chart-5: #EF4444; 
+    --pie-chart-6: #8B5CF6; 
+    --pie-chart-7: #14B8A6; 
+    --pie-chart-8: #3B82F6; 
+    --landing-page-Bg: url('assets/portfoliobgdark.jpg'); 
+    --gradient-stop1: #5A4C43; 
+    --gradient-stop2: #BBAE95; 
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply text-foreground;
+   
+
+  }
+
+
+
+  @screen sm {
+    body {
+      background-size: auto 100%; /* Adjust to show the full height */
+      background-attachment: scroll; /* Disable parallax on small screens */
+    }
+
+  }
+
+  body::-webkit-scrollbar {
+    display: none;
+  }
+
+}
+
+
+html {
+  scroll-behavior: smooth;
+  
+}
+
+.text-shadow {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0); /* Horizontal, vertical offset, blur, color */
+}
+
+.ubuntu-light {
+  font-family: "Ubuntu", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.ubuntu-regular {
+  font-family: "Ubuntu", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.ubuntu-medium {
+  font-family: "Ubuntu", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.ubuntu-bold {
+  font-family: "Ubuntu", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.ubuntu-light-italic {
+  font-family: "Ubuntu", serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.ubuntu-regular-italic {
+  font-family: "Ubuntu", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.ubuntu-medium-italic {
+  font-family: "Ubuntu", serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.ubuntu-bold-italic {
+  font-family: "Ubuntu", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+
+.noto-kufi-arabic-normal {
+  font-family: "Noto Kufi Arabic", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.noto-kufi-arabic-bold {
+  font-family: "Noto Kufi Arabic", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.noto-kufi-arabic-semi-bold {
+  font-family: "Noto Kufi Arabic", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+@layer components {
+  .blurred-background {
+    position: relative;
+    min-height: 100vh; 
+    overflow: hidden; 
+  }
+  
+  .blurred-background::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: var(--main-page-bg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: blur(16px);
+    transform: scale(1.1); 
+    transform-origin: center center;
+    z-index: -1;
+  }
+
+ 
+
+
+
+  .rbc-calendar {
+    @apply bg-background text-foreground;
+  }
+
+  .rbc-toolbar button {
+    @apply bg-secondary text-secondary-foreground hover:bg-accent hover:text-accent-foreground;
+  }
+
+  .rbc-toolbar button.rbc-active {
+    @apply bg-primary text-primary-foreground;
+  }
+
+  .rbc-header {
+    @apply bg-muted text-muted-foreground;
+  }
+
+  .rbc-day-bg {
+    @apply bg-background;
+  }
+
+  .rbc-off-range-bg {
+    @apply bg-muted;
+  }
+
+  .rbc-today {
+    @apply bg-accent;
+  }
+
+  .rbc-event {
+    @apply bg-primary text-primary-foreground;
+  }
+
+  .dark .rbc-calendar {
+    @apply bg-background text-foreground;
+  }
+
+  .dark .rbc-toolbar button {
+    @apply bg-secondary text-secondary-foreground hover:bg-accent hover:text-accent-foreground;
+  }
+
+  .dark .rbc-toolbar button.rbc-active {
+    @apply bg-primary text-primary-foreground;
+  }
+
+  .dark .rbc-header {
+    @apply bg-background text-muted-foreground;
+  }
+
+  .dark .rbc-day-bg {
+    @apply bg-background;
+  }
+
+  .dark .rbc-off-range-bg {
+    @apply bg-muted;
+  }
+
+  .dark .rbc-today {
+    @apply bg-accent;
+  }
+
+  .dark .rbc-event {
+    @apply bg-primary text-primary-foreground;
+  }
+
+}
+html {
+  @apply font-english;
+}
+
+html.arabic-font {
+  @apply font-arabic;
+  direction: rtl; 
+}
+.signature-container {
+  width: 100%;
+  height: 200px;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  touch-action: none;
+}
+
+.signature-canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+@media (max-width: 768px) {
+  .bg-landingPageBg {
+    background-attachment: scroll;
+  }
+}
+
+@media (min-width: 769px) {
+  .bg-landingPageBg {
+    background-attachment: fixed;
+  }
+}
