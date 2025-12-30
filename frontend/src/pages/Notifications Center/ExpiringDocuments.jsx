@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import { useState, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { Pagination } from "@/components/ui/Pagination";
+import { Pagination } from "@/components/ui/pagination";
 
 /**
  * ExpiringDocuments component to display documents that are expiring within a month.

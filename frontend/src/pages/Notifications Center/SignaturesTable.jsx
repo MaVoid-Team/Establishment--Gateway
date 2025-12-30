@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import { useState, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { Pagination } from "@/components/ui/Pagination";
+import { Pagination } from "@/components/ui/pagination";
 
 /**
  * OrdersTable component to display order audit logs with pagination.

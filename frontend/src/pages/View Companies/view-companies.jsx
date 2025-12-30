@@ -7,7 +7,7 @@ import {
   Card,
   CardContent,
 } from "@/components/ui/card"
-import { Pagination } from '../../components/ui/pagination'
+import { Pagination } from "@/components/ui/pagination";
 import { useTranslation } from 'react-i18next'
 import { useNavigate } from 'react-router-dom'
 

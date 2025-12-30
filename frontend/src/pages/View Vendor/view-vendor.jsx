@@ -12,7 +12,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { useState, useEffect, useMemo } from "react";
-import { Pagination } from '../../components/ui/pagination';
+import { Pagination } from "@/components/ui/pagination";
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { useTranslation } from 'react-i18next';
