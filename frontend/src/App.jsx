@@ -60,12 +60,13 @@ import ContractsReviewForm from "./pages/Contract System/submit-contract-review"
 import BackgroundSelector from "./pages/Settings/BackgroundSelector";
 import ImageBackgroundSelector from '@/components/ui/ImageBackgroundSelector';
 import ContractReviewForm from "./pages/Contract System/submit-contract-review";
-import Support from "./pages/Support/support"
 import OrderEdit from "./pages/Order Details/EditOrderDetails";
 import LiwanLoadingScreen from "./components/ui/loadingscreen";
 import SignatureView from "./pages/Signatures History/SignatureView";
 import Footer from "./components/ui/footer";
 import PrintableOrder from "./pages/Order Details/PrintableOrder";
+import Support from "./pages/support/support";
+
 const AppContent = () => {
   const location = useLocation();
   const [darkMode, setDarkMode] = useState(false);
