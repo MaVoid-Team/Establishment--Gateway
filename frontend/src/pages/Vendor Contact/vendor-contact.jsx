@@ -8,7 +8,7 @@ import { FileText } from 'lucide-react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import { toast } from '@/hooks/use-toast';
-import { UploadVendorDocumentDialog } from './UploadVendorDocumentDialog';
+import { UploadVendorDocumentDialog } from './uploadVendorDocumentDialog';
 
 export default function VendorContact() {
   const containerRef = useRef(null);
@@ -222,7 +222,7 @@ export default function VendorContact() {
               {(!attachment || Object.values(attachment).every(v => v === null)) && (
                 <div>{t("noDocumentsAvailable")}</div>
               )}
-              <UploadVendorDocumentDialog 
+              <UploadVendorDocumentDialog
                 vendorId={id} 
                 onUploadSuccess={fetchVendorData} 
               />
