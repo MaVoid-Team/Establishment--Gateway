@@ -7,7 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
-import { UploadCompanyDocumentDialog } from './UploadCompanyDocumentDialog';
+import { UploadCompanyDocumentDialog } from './uploadCompanyDocumentDialog';
 
 export default function Company() {
   const containerRef = useRef(null);
