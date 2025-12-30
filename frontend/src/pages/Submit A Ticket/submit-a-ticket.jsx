@@ -7,7 +7,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
 import { useNavigate } from "react-router-dom";
-import { FilePreview } from "./FilePreview";
+import { FilePreview } from "./filepreview";
 
 const TicketForm = () => {
   const { toast } = useToast();
