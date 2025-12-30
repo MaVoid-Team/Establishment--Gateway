@@ -1,37 +1,28 @@
-name: Deploy Frontend to GitHub Pages
+name: Build and Deploy to GitHub Pages
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main # Runs every time you push to main
+
+permissions:
+  contents: write
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      # 1️⃣ Checkout the repo
-      - uses: actions/checkout@v4
+      - name: Checkout 🛎️
+        uses: actions/checkout@v4
 
-      # 2️⃣ Setup Node
-      - name: Setup Node
-        uses: actions/setup-node@v4
+      - name: Install and Build 🔧
+        run: |
+          npm install
+          npm run build
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          node-version: 18
-          cache: npm
-
-      # 3️⃣ Install dependencies in frontend
-      - name: Install frontend dependencies
-        run: npm install
-        working-directory: ./frontend
-
-      # 4️⃣ Build the frontend
-      - name: Build frontend
-        run: npm run build
-        working-directory: ./frontend
-
-      # 5️⃣ Deploy to GitHub Pages
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./frontend/dist
+          folder: dist # The folder the action should deploy.
+          branch: gh-pages # The branch the action should deploy to.
