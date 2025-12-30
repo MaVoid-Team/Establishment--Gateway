@@ -1,9 +1,8 @@
-name: Build and Deploy Frontend
+name: Deploy Vite App to GitHub Pages
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
 
 permissions:
   contents: write
@@ -13,22 +12,27 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout 🛎️
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Node.js ⚙️
+      - name: Use Node.js 18
         uses: actions/setup-node@v4
         with:
-          node-version: "20" # Or your preferred version
+          node-version: 18
+          cache: "npm"
+          cache-dependency-path: frontend/package-lock.json
 
-      - name: Install and Build 🔧
-        working-directory: ./frontend # 👈 Run npm commands here
-        run: |
-          npm install
-          npm run build
+      - name: Install dependencies
+        working-directory: ./frontend
+        run: npm install --legacy-peer-deps
 
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@v4
+      - name: Build Project
+        working-directory: ./frontend
+        run: npm run build
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          folder: frontend/dist # 👈 Path to your built files
-          branch: gh-pages
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          # 💡 Vite builds into 'dist', not 'out'
+          publish_dir: ./frontend/dist
