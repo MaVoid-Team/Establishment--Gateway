@@ -21,8 +21,8 @@ import { CalendarIcon, Search } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import { Pagination } from "@/components/ui/Pagination.jsx";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Pagination } from "@/components/ui/pagination";
 
 export default function SignaturesHistory() {
   const { t, i18n } = useTranslation();
