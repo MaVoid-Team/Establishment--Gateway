@@ -1,9 +1,9 @@
-name: Build and Deploy to GitHub Pages
+name: Build and Deploy Frontend
 
 on:
   push:
     branches:
-      - main # Runs every time you push to main
+      - main
 
 permissions:
   contents: write
@@ -16,7 +16,13 @@ jobs:
       - name: Checkout 🛎️
         uses: actions/checkout@v4
 
+      - name: Setup Node.js ⚙️
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20" # Or your preferred version
+
       - name: Install and Build 🔧
+        working-directory: ./frontend # 👈 Run npm commands here
         run: |
           npm install
           npm run build
@@ -24,5 +30,5 @@ jobs:
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: dist # The folder the action should deploy.
-          branch: gh-pages # The branch the action should deploy to.
+          folder: frontend/dist # 👈 Path to your built files
+          branch: gh-pages
